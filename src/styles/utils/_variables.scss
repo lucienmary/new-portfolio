@@ -1,2 +1,18 @@
-$c-bg: #efefef;
-$c-alt: #e41612;
+// Gradient.
+$g-back: rgb(43,43,43);
+$g-main: linear-gradient(180deg, rgba(43,43,43,1) 0%, rgba(0,0,0,1) 100%);
+
+
+
+// Colors.
+$c-main: #1FD98A;
+$c-main-alpha: rgba(31, 217, 138, 0.65);
+
+// Text.
+$t-main: #fff;
+
+// Font.
+$f-main: 'Montserrat', sans-serif;
+
+// Shadows.
+$s-title: 0px 6px 6px rgba(0, 0, 0, 0.25);

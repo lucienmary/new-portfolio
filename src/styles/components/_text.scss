@@ -1,0 +1,21 @@
+body{
+    color: $t-main;
+}
+.baseline{
+    color: $c-main;
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+}
+.logo{
+    font-weight: bold;
+    &--l{
+        font-weight: lighter;
+        color: $c-main;
+    }
+}
+
+.coord{
+    text-align: center;
+    display: block;
+}

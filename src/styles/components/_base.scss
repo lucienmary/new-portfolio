@@ -1,0 +1,50 @@
+body {
+  background: $g-back;
+  background: $g-main;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+::selection{
+    background-color: $c-main-alpha;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.main-header{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.scroll{
+    float: right;
+    position: relative;
+    opacity: 0.6;
+    &:before{
+        content: '';
+        position: absolute;
+        border: solid grey;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 8px;
+        transform: rotate(45deg);
+        top: 0px;
+        left: -40px;
+    }
+    &:after{
+        content: '...';
+    }
+}
+
+.clear{
+    clear: both;
+}
+
+.section-projects{
+    margin-top: 120px;
+}
