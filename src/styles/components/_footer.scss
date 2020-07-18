@@ -1,0 +1,37 @@
+.footer-page{
+    margin-top: 173px;
+    z-index: 10;
+    position: relative;
+    &:before{
+        content: '';
+        // height: 4px;
+        width: 100%;
+        border-top: 1px dashed grey;
+        position: absolute;
+    }
+    div{
+        z-index: 10;
+    }
+    &__p{
+        margin-top: 15px;
+        margin-bottom: 0;
+        font-size: 0.8rem;
+        color: grey;
+        a{
+            font-size: 0.8rem;
+            margin-left: 38px;
+            text-decoration: underline;
+            color: grey;
+            &:before{
+                content: '-';
+                position: absolute;
+                margin-left: -20px;
+                color: grey;
+            }
+            &:last-child{
+                text-decoration: inherit;
+                color: $t-main;
+            }
+        }
+    }
+}

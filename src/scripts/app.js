@@ -9,7 +9,7 @@ console.info(`Hello ${name()}`);
 $(window).on('load', addNoise);
 
 function addNoise() {
-  $('.noise-wrapper').css('opacity',0.25);
+  $('.noise-wrapper').css('opacity',0.3);
 }
 
 // cursor glitch.

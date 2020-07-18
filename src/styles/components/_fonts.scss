@@ -2,6 +2,15 @@ body{
     font-family: $f-main;
 }
 
+h1{
+    font-size: 5.2rem;
+    margin-top: 80px;
+    margin-left: -5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: $s-title;
+}
+
 p{
     font-size: 1.2rem;
     line-height: 1.6;

@@ -3,8 +3,9 @@ body {
   background: $g-main;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: $g-back;
   font-family: sans-serif;
-  min-height: 100vh;
+  min-height: 200vh;
 }
 
 ::selection{
@@ -17,15 +18,16 @@ ul{
 }
 
 .main-header{
-    margin-top: 40px;
+    padding-top: 40px;
     margin-bottom: 20px;
 }
 
 .scroll{
-    float: right;
-    position: relative;
+    position: absolute;
+    bottom: 3vh;
     opacity: 0.6;
     margin-top: 10px;
+    transform: translate(-100%);
     &:before{
         content: '';
         position: absolute;
@@ -46,6 +48,12 @@ ul{
     clear: both;
 }
 
-.section-projects{
-    margin-top: 120px;
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+a:hover{
+    color: $c-main;
 }

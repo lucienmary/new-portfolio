@@ -24,14 +24,16 @@
     <main class="container">
         <section>
             <header class="col-md-12">
-                 <h1 class="glitch-cursor-select glitch-cursor glitched-text glitch is-glitching" data-text="Lucien Mary">Lucien Mary</h1>
+                 <h1 class="glitch-cursor-select glitch-cursor glitch is-glitching" data-text="Lucien Mary">Lucien Mary</h1>
                 <p class="baseline">Front end developer Junior</p>
             </header>
 
             <div class="col-md-5">
                 <p>Je m’appelle Lucien Mary, j’ai 22 ans. Après une qualification en infographie, j'ai été diplomé en design web et mobile en 2020. Vous pouvez retrouver sur ce site mes meilleurs projets.</p>
             </div>
-            <img class="me" src="assets/images/lucien@2x.jpg" alt="Photo de Lucien Mary travaillant sur un ordinateur.">
+            <div class="float-right">
+                <img class="me" src="assets/images/lucien@2x.jpg" alt="Photo de Lucien Mary travaillant sur un ordinateur.">
+            </div>
 
             <div class="contact col-md-5">
                 <ul class="list-socials">
@@ -56,27 +58,42 @@
                 <a class="coord" href="tel:+32479528839">+32 (0)479 52 88 39</a>
             </div>
 
-            <footer>
+            <footer class="float-right">
                 <a class="scroll" href="">Scroll</a>
             </footer>
         </section>
 
-        <section class="section-projects clear">
+        <section class="section-projects clearfix">
             <header>
-                <h2>Projets</h2>
-
-                <div class="project">
-                    <h3>Nom du projet</h3>
-                    <p>Description du projet en quelques lignes. Souvent, cette description est très bien écrite.</p>
-                    <img src="" alt="Image du projet">
-                </div>
-
+                <h2 class="title-section col-md-12">Projets</h2>
             </header>
+
+            <div class="arrow">
+                <a class="arrow__el--left" href="#"></a>
+                <a class="arrow__el--right" href="#"></a>
+            </div>
+
+            <div class="project">
+                <h3 class="project__h3 col-md-8">The jungle snack! Jeu en ligne</h3>
+                <p class="project__date col-md-6">Juin 2020</p>
+                <p class="project__desc col-md-6">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
+                <a href="#">
+                    <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
+                </a>
+            </div>
+
+            <footer class="offset-md-4 col-md-4">
+                <div class="button">
+                    <a class="button__el glitch is-glitching" href="" data-text="Voir le projet">Voir le projet</a>
+                </div>
+            </footer>
         </section>
     </main>
 
-    <footer>
-        <p>Lucien Mary © 2020 | <a href="#">Contact</a> <a href="#">Politique de confidentialité</a> </p>
+    <footer class="clearfix footer-page">
+        <div class="container">
+            <p class="float-right footer-page__p">Lucien Mary © 2020<a href="#">Politique de confidentialité</a><a class="button-filled" href="#">Me contacter!</a></p>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

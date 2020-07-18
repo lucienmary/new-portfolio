@@ -19,3 +19,9 @@ body{
     text-align: center;
     display: block;
 }
+
+.title-section{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: $s-title;
+}

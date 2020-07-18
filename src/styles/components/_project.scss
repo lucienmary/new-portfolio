@@ -1,0 +1,95 @@
+.section-projects{
+    z-index: 1;
+    // background-color: blue;
+    margin-top: 30vh;
+    position: relative;
+    // height: 100vh;
+}
+
+.project{
+    position: relative;
+    margin-top: 20vh;
+    width: 100%;
+    // background-color: grey;
+    &__h3{
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-shadow: $s-project;
+        z-index: 1;
+    }
+    &__date{
+        z-index: 1;
+        color: grey;
+        &:before{
+            content: '– ';
+        }
+    }
+    &__desc{
+        z-index: 1;
+    }
+    &__img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        margin-top: -25px;
+        box-shadow: $s-project;
+
+        filter: grayscale(100%);
+        transition: 0.35s all;
+
+        &:hover{
+            filter: grayscale(0%);
+            transform: scale(1.1);
+            transition: 0.5s all ease-in-out;
+        }
+    }
+}
+
+.arrow{
+    position: absolute;
+    width: 100%;
+    &__el{
+        color: transparent;
+        font-size: 0;
+        &--left{
+            &:before{
+                content: '';
+                position: absolute;
+                border: solid grey;
+                border-width: 0 4px 4px 0;
+                display: inline-block;
+                padding: 12px;
+                transform: rotate(135deg);
+                top: 34vh;
+                left: -5vw;
+                transition: transform 0.1s ease-in-out;
+            }
+            &:hover:before{
+                border-color: $c-main;
+                transform: rotate(135deg) scale(1.2) translate(3px, 3px);
+                transition: transform 0.2s ease-in-out;
+            }
+        }
+        &--right{
+            &:before{
+                content: '';
+                position: absolute;
+                border: solid grey;
+                border-width: 0 4px 4px 0;
+                display: inline-block;
+                padding: 12px;
+                transform: rotate(-45deg);
+                top: 34vh;
+                right: -5vw;
+                transition: transform 0.1s ease-in-out;
+            }
+            &:hover:before{
+                border-color: $c-main;
+                transform: rotate(-45deg) scale(1.2) translate(3px, 3px);
+                transition: transform 0.2s ease-in-out;
+            }
+        }
+    }
+}
