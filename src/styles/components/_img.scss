@@ -25,3 +25,11 @@
     top: 15vh;
     transform: translate(-100%);
 }
+
+.illu{
+    z-index: -1;
+    max-width: 100%;
+    margin-top: 9.75vh;
+    box-shadow: $s-project;
+    border: 1px dashed grey;
+}

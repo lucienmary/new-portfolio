@@ -34,4 +34,10 @@
             }
         }
     }
+    &--bottom{
+        position: absolute;
+        bottom: 1vh;
+        right: 0;
+        width: 100%;
+    }
 }

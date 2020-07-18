@@ -5,7 +5,11 @@ body {
   background-size: cover;
   background-color: $g-back;
   font-family: sans-serif;
-  min-height: 200vh;
+  min-height: 100vh;
+}
+
+.body-height{
+    min-height: 200vh;
 }
 
 ::selection{
