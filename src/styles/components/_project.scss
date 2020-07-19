@@ -8,7 +8,7 @@
 
 .project{
     position: relative;
-    margin-top: 20vh;
+    margin-top: 18vh;
     width: 100%;
     // background-color: grey;
     &__h3{
@@ -28,22 +28,23 @@
     &__desc{
         z-index: 1;
     }
-    &__img{
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 0;
-        margin-top: -25px;
-        box-shadow: $s-project;
-
+    &__link{
         filter: grayscale(100%);
         transition: 0.35s all;
+        z-index: 12;
 
         &:hover{
             filter: grayscale(0%);
             transform: scale(1.1);
             transition: 0.5s all ease-in-out;
         }
+    }
+    &__img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        margin-top: -350px;
     }
 }
 

@@ -1,0 +1,13 @@
+.number{
+    padding: 0;
+    margin: auto;
+    display: flex;
+    margin-top: 80px;
+    &__li{
+        text-align: center;
+        width: 20%;
+        &:nth-child(1n){
+            color: $c-main;
+        }
+    }
+}

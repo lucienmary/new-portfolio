@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/styles/app.css">
 </head>
-<body class="body-height">
+<body class="body-height" data-hijacking="off" data-animation="rotate">
 
     <header class="container main-header">
 
@@ -18,7 +18,9 @@
         </div>
 
         <div class="col-md-1">
-            <h2 class="logo">M<span class="logo--l">L</span></h2>
+            <a href="./">
+                <h2 class="logo">M<span class="logo--l">L</span></h2>
+            </a>
         </div>
     </header>
 
@@ -78,14 +80,36 @@
                 <h3 class="project__h3 col-md-8">The jungle snack! Jeu en ligne</h3>
                 <p class="project__date col-md-6">Juin 2020</p>
                 <p class="project__desc col-md-6">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
-                <a href="desc.html">
-                    <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
-                </a>
+                <div data-relative-input="true" data-pointer-events="true" id="scene">
+                    <a href="desc.html" data-depth="0.15" class="project__link">
+                        <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
+                    </a>
+                </div>
             </div>
 
             <footer class="offset-md-4 col-md-4">
                 <div class="button">
                     <a class="button__el glitch is-glitching" href="desc.html" data-text="Plus d'infos">Plus d'infos</a>
+                </div>
+
+                <div class="">
+                    <ul class="number">
+                        <li class="number__li">
+                            <a href="#">1</a>
+                        </li>
+                        <li class="number__li">
+                            <a href="#">2</a>
+                        </li>
+                        <li class="number__li">
+                            <a href="#">3</a>
+                        </li>
+                        <li class="number__li">
+                            <a href="#">4</a>
+                        </li>
+                        <li class="number__li">
+                            <a href="#">5</a>
+                        </li>
+                    </ul>
                 </div>
             </footer>
         </section>
