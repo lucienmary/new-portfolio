@@ -5,12 +5,11 @@ export function slider () {
     const slider = $('#slider');
     const number = $('.number');
     const lengthSlider = ($('#slider li').length - 1);
-    console.log(lengthSlider);
+    const numberLink = $('.number__li');
 
     var active = slider.children('.project--current');
     var activeVal = active.attr('value');
 
-    console.log(activeVal);
 
     leftBtn.click((e) => {
         e.preventDefault();
@@ -26,8 +25,8 @@ export function slider () {
 
         active = slider.find("[value='"+(activeVal)+"']");
 
-        number.children('li').removeClass('number__li--active');
-        number.find("[value='"+(activeVal)+"']").addClass('number__li--active');
+        numberLink.removeClass('number__li--active');
+        number.find("[value='"+(activeVal)+"']").parent().addClass('number__li--active');
 
         active.addClass('project--current');
         active.removeClass('project--right project--left');
@@ -47,8 +46,27 @@ export function slider () {
 
         active = slider.find("[value='"+(activeVal)+"']");
 
+        numberLink.removeClass('number__li--active');
+        number.find("[value='"+(activeVal)+"']").parent().addClass('number__li--active');
+
+        active.addClass('project--current');
+        active.removeClass('project--right project--left');
+    });
+
+    numberLink.click((e) => {
+        e.preventDefault();
+
+        activeVal = $(e.target).attr('value');
+
+        active.removeClass('project--current');
+        active.addClass('project--left');
+
+        // activeVal = e;
+
+        active = slider.find("[value='"+(activeVal)+"']");
+
         number.children('li').removeClass('number__li--active');
-        number.find("[value='"+(activeVal)+"']").addClass('number__li--active');
+        $(e.target).parent().addClass('number__li--active');
 
         active.addClass('project--current');
         active.removeClass('project--right project--left');
