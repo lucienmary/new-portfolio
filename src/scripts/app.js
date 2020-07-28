@@ -1,6 +1,8 @@
 import { noise } from './components/noise';
-import { parallax } from './components/parallax';
+import { slider } from './components/slider';
 
 
 // Utilisation des modules.
 noise();
+
+slider();

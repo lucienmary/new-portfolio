@@ -1,11 +1,12 @@
 body {
-  background: $g-back;
-  background: $g-main;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: $g-back;
-  font-family: sans-serif;
-  min-height: 100vh;
+    background: $g-back;
+    background: $g-main;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $g-back;
+    font-family: sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .body-height{

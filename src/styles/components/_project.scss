@@ -3,14 +3,30 @@
     // background-color: blue;
     margin-top: 30vh;
     position: relative;
-    // height: 100vh;
+    height: 70vh;
+    margin-bottom: 20vh;
+}
+
+.project-container{
+    padding: inherit;
+    list-style: none;
 }
 
 .project{
-    position: relative;
+    position: absolute;
     margin-top: 18vh;
     width: 100%;
     // background-color: grey;
+    transform: inherit;
+    transition: transform $slider-transi ease;
+    &--left{
+        transform: translate(-150%) scale(0.5);
+        transition: transform $slider-transi ease;
+    }
+    &--right{
+        transform: translate(150%) scale(0.5);
+        transition: transform $slider-transi ease;
+    }
     &__h3{
         font-size: 4rem;
         text-transform: uppercase;
@@ -29,7 +45,7 @@
         z-index: 1;
     }
     &__link{
-        filter: grayscale(100%);
+        filter: grayscale(80%);
         transition: 0.35s all;
         z-index: 12;
 
@@ -40,11 +56,10 @@
         }
     }
     &__img{
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0;
         margin-top: -350px;
+        float: right;
+        border: 1px dashed grey;
+        padding: inherit;
     }
 }
 

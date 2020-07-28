@@ -72,41 +72,103 @@
             </header>
 
             <div class="arrow">
-                <a class="arrow__el--left" href="#"></a>
-                <a class="arrow__el--right" href="#"></a>
+                <a id="arrowLeft" class="arrow__el--left" href="#"></a>
+                <a id="arrowRight" class="arrow__el--right" href="#"></a>
             </div>
 
-            <div class="project">
-                <h3 class="project__h3 col-md-8">The jungle snack! Jeu en ligne</h3>
-                <p class="project__date col-md-6">Juin 2020</p>
-                <p class="project__desc col-md-6">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
-                <div data-relative-input="true" data-pointer-events="true" id="scene">
-                    <a href="desc.html" data-depth="0.15" class="project__link">
-                        <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
-                    </a>
-                </div>
-            </div>
+            <ul id="slider" class="project-container clearfix">
+                <li class="project project--current" value="0">
+                    <h3 class="project__h3 col-md-8">The jungle snack! 0</h3>
+                    <p class="project__date col-md-6">Juin 2020</p>
+                    <p class="project__desc col-md-6">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
+                    <div>
+                        <a href="desc.html"class="project__link">
+                            <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
+                        </a>
+                    </div>
+
+                    <div class="button offset-md-4 col-md-4">
+                        <a class="button__el glitch is-glitching" href="desc.html" data-text="Plus d'infos">Plus d'infos</a>
+                    </div>
+                </li>
+
+                <li class="project project--right" value="1">
+                    <h3 class="project__h3 col-md-8">The jungle snack! 1</h3>
+                    <p class="project__date col-md-6">Juin 2020</p>
+                    <p class="project__desc col-md-6">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
+                    <div>
+                        <a href="desc.html"class="project__link">
+                            <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
+                        </a>
+                    </div>
+
+                    <div class="button offset-md-4 col-md-4">
+                        <a class="button__el glitch is-glitching" href="desc.html" data-text="Plus d'infos">Plus d'infos</a>
+                    </div>
+                </li>
+
+                <li class="project project--right" value="2">
+                    <h3 class="project__h3 col-md-8">The jungle snack! 2</h3>
+                    <p class="project__date col-md-6">Juin 2020</p>
+                    <p class="project__desc col-md-6">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
+                    <div>
+                        <a href="desc.html"class="project__link">
+                            <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
+                        </a>
+                    </div>
+
+                    <div class="button offset-md-4 col-md-4">
+                        <a class="button__el glitch is-glitching" href="desc.html" data-text="Plus d'infos">Plus d'infos</a>
+                    </div>
+                </li>
+
+                <li class="project project--right" value="3">
+                    <h3 class="project__h3 col-md-8">The jungle snack! 3</h3>
+                    <p class="project__date col-md-6">Juin 2020</p>
+                    <p class="project__desc col-md-6">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
+                    <div>
+                        <a href="desc.html"class="project__link">
+                            <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
+                        </a>
+                    </div>
+
+                    <div class="button offset-md-4 col-md-4">
+                        <a class="button__el glitch is-glitching" href="desc.html" data-text="Plus d'infos">Plus d'infos</a>
+                    </div>
+                </li>
+
+                <li class="project project--right" value="4">
+                    <h3 class="project__h3 col-md-8">The jungle snack! 4</h3>
+                    <p class="project__date col-md-6">Juin 2020</p>
+                    <p class="project__desc col-md-6">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
+                    <div>
+                        <a href="desc.html"class="project__link">
+                            <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
+                        </a>
+                    </div>
+
+                    <div class="button offset-md-4 col-md-4">
+                        <a class="button__el glitch is-glitching" href="desc.html" data-text="Plus d'infos">Plus d'infos</a>
+                    </div>
+                </li>
+            </ul>
 
             <footer class="offset-md-4 col-md-4">
-                <div class="button">
-                    <a class="button__el glitch is-glitching" href="desc.html" data-text="Plus d'infos">Plus d'infos</a>
-                </div>
-
                 <div class="">
                     <ul class="number">
-                        <li class="number__li">
+                        <li class="number__li number__li--active" value="0">
                             <a href="#">1</a>
                         </li>
-                        <li class="number__li">
+                        <li class="number__li" value="1">
                             <a href="#">2</a>
                         </li>
-                        <li class="number__li">
+                        <li class="number__li" value="2">
                             <a href="#">3</a>
                         </li>
-                        <li class="number__li">
+                        <li class="number__li" value="3">
                             <a href="#">4</a>
                         </li>
-                        <li class="number__li">
+                        <li class="number__li" value="4">
                             <a href="#">5</a>
                         </li>
                     </ul>
