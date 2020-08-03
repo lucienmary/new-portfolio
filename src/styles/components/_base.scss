@@ -1,3 +1,6 @@
+html{
+    min-width: 100%;
+}
 body {
     background: $g-back;
     background: $g-main;
@@ -7,6 +10,8 @@ body {
     font-family: sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
+
+    cursor: vertical-text;
 }
 
 .body-height{
@@ -46,6 +51,20 @@ ul{
     }
     &:after{
         content: '...';
+    }
+    &:hover{
+        color: inherit;
+        transition: all 0.1s ease;
+        text-decoration: none;
+
+        animation-name: glitch_opacity;
+        animation-duration: 0.14s;
+        animation-iteration-count: infinite;
+        &:before{
+            top: 2px;
+            color: inherit;
+            border-color: $c-main;
+        }
     }
 }
 

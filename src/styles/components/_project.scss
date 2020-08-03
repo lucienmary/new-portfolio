@@ -45,7 +45,7 @@
         z-index: 1;
     }
     &__link{
-        filter: grayscale(80%);
+        filter: grayscale(50%);
         transition: 0.35s all;
         z-index: 12;
 
@@ -66,6 +66,7 @@
 .arrow{
     position: absolute;
     width: 100%;
+    z-index: 100;
     &__el{
         color: transparent;
         font-size: 0;

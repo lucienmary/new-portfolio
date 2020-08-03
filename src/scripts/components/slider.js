@@ -52,23 +52,4 @@ export function slider () {
         active.addClass('project--current');
         active.removeClass('project--right project--left');
     });
-
-    numberLink.click((e) => {
-        e.preventDefault();
-
-        activeVal = $(e.target).attr('value');
-
-        active.removeClass('project--current');
-        active.addClass('project--left');
-
-        // activeVal = e;
-
-        active = slider.find("[value='"+(activeVal)+"']");
-
-        number.children('li').removeClass('number__li--active');
-        $(e.target).parent().addClass('number__li--active');
-
-        active.addClass('project--current');
-        active.removeClass('project--right project--left');
-    });
 }
