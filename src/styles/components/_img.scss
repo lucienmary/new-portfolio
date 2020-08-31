@@ -1,10 +1,10 @@
 .list-socials{
     text-align: center;
-    margin-top: 80px;
-    margin-bottom: 28px;
+    margin-top: 25px;
+    margin-bottom: 15px;
     li{
         display: inline;
-        margin-right: 56px;
+        margin-right: 25px;
         &:last-child{
             margin-right: inherit;
         }
@@ -13,7 +13,7 @@
         padding: 8px;
         display: inline-block;
         &__el{
-            width: 36px;
+            width: 24px;
             transition: all 0.1s ease;
             &:hover{
                 transition: all 0.1s ease;
@@ -27,11 +27,10 @@
 }
 
 .me{
-    position: absolute;
+    position: relative;
     max-height: 75%;
     z-index: -1;
-    top: 15vh;
-    transform: translate(-100%);
+    margin-top: 25px;
 }
 
 .illu{
@@ -40,4 +39,41 @@
     margin-top: 9.75vh;
     box-shadow: $s-project;
     border: 1px dashed grey;
+}
+
+@media (min-width: 768px) {
+    .me{
+        position: absolute;
+        top: 15vh;
+        transform: translate(-100%);
+        margin-top: 0px;
+    }
+
+    .list-socials{
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 28px;
+        li{
+            display: inline;
+            margin-right: 56px;
+            &:last-child{
+                margin-right: inherit;
+            }
+        }
+        .socials{
+            padding: 8px;
+            display: inline-block;
+            &__el{
+                width: 36px;
+                transition: all 0.1s ease;
+                &:hover{
+                    transition: all 0.1s ease;
+
+                    animation-name: glitch_opacity;
+                    animation-duration: 0.14s;
+                    animation-iteration-count: infinite;
+                }
+            }
+        }
+    }
 }

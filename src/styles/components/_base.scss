@@ -1,5 +1,6 @@
 html{
-    min-width: 100%;
+    // min-width: 100%;
+    overflow-x: hidden;
 }
 body {
     background: $g-back;
@@ -11,7 +12,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 
-    cursor: vertical-text;
+    cursor: crosshair;
 }
 
 .body-height{
@@ -28,26 +29,27 @@ ul{
 }
 
 .main-header{
-    padding-top: 40px;
+    padding-top: 20px;
     margin-bottom: 20px;
 }
 
 .scroll{
     position: absolute;
-    bottom: 3vh;
+    bottom: 1vh;
     opacity: 0.6;
     margin-top: 10px;
     transform: translate(-100%);
+    font-size: 0.9rem;
     &:before{
         content: '';
         position: absolute;
         border: solid grey;
-        border-width: 0 2px 2px 0;
+        border-width: 0 1px 1px 0;
         display: inline-block;
-        padding: 8px;
+        padding: 4px;
         transform: rotate(45deg);
-        top: 0px;
-        left: -40px;
+        top: 3px;
+        left: -25px;
     }
     &:after{
         content: '...';
@@ -80,4 +82,46 @@ ul{
 
 a:hover{
     color: $c-main;
+}
+
+@media (min-width: 768px) {
+    .scroll{
+        position: absolute;
+        bottom: 3vh;
+        opacity: 0.6;
+        margin-top: 10px;
+        transform: translate(-100%);
+        font-size: inherit;
+        &:before{
+            content: '';
+            position: absolute;
+            border: solid grey;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 8px;
+            transform: rotate(45deg);
+            top: 0px;
+            left: -40px;
+        }
+        &:after{
+            content: '...';
+        }
+        &:hover{
+            color: inherit;
+            transition: all 0.1s ease;
+            text-decoration: none;
+
+            animation-name: glitch_opacity;
+            animation-duration: 0.14s;
+            animation-iteration-count: infinite;
+            &:before{
+                top: 2px;
+                color: inherit;
+                border-color: $c-main;
+            }
+        }
+    }
+    .main-header{
+        padding-top: 40px;
+    }
 }

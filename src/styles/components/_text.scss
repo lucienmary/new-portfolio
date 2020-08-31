@@ -4,8 +4,8 @@ body{
 .baseline{
     color: $c-main;
     font-weight: 300;
-    font-size: 1.6rem;
-    margin-bottom: 40px;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
 }
 .logo{
     &__el{
@@ -33,6 +33,7 @@ body{
 .coord{
     text-align: center;
     display: block;
+    // font-size: rem;
     &:hover{
         transition: all 0.1s ease;
         text-decoration: inherit;
@@ -52,4 +53,16 @@ body{
 
 .desc{
     font-size: 4.2rem;
+}
+
+@media (min-width: 768px) {
+    .baseline{
+        color: $c-main;
+        font-weight: 300;
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+    }
+    .coord{
+        font-size: inherit;
+    }
 }

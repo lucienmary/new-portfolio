@@ -5,6 +5,9 @@ export function noise () {
 
     function addNoise() {
       $('.noise-wrapper').css('opacity',0.4);
+
+      // Pour que le bg noise prenne tte le hauteur.
+      $('.noise-wrapper--200').css("height", $(document).height()+'px');
     }
 
     // cursor glitch.

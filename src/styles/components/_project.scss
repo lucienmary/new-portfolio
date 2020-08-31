@@ -14,7 +14,7 @@
 
 .project{
     position: absolute;
-    margin-top: 18vh;
+    margin-top: 140px;
     width: 100%;
     // background-color: grey;
     transform: inherit;
@@ -28,7 +28,7 @@
         transition: transform $slider-transi ease;
     }
     &__h3{
-        font-size: 4rem;
+        font-size: 2rem;
         text-transform: uppercase;
         font-weight: bold;
         text-shadow: $s-project;
@@ -36,13 +36,18 @@
     }
     &__date{
         z-index: 1;
-        color: grey;
+        text-shadow: $s-project;
+        text-align: right;
         &:before{
             content: '– ';
         }
     }
     &__desc{
         z-index: 1;
+        text-shadow: $s-project;
+        background-color: $g-back-alpha;
+        padding-top: 5px;
+        padding-bottom: 10px;
     }
     &__link{
         filter: grayscale(50%);
@@ -56,7 +61,7 @@
         }
     }
     &__img{
-        margin-top: -350px;
+        margin-top: -225px;
         float: right;
         border: 1px dashed grey;
         padding: inherit;
@@ -79,8 +84,8 @@
                 display: inline-block;
                 padding: 12px;
                 transform: rotate(135deg);
-                top: 34vh;
-                left: -5vw;
+                top: 76vh;
+                left: 5vw;
                 transition: transform 0.1s ease-in-out;
             }
             &:hover:before{
@@ -98,14 +103,122 @@
                 display: inline-block;
                 padding: 12px;
                 transform: rotate(-45deg);
-                top: 34vh;
-                right: -5vw;
+                top: 76vh;
+                right: 5vw;
                 transition: transform 0.1s ease-in-out;
             }
             &:hover:before{
                 border-color: $c-main;
                 transform: rotate(-45deg) scale(1.2) translate(3px, 3px);
                 transition: transform 0.2s ease-in-out;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .project{
+        position: absolute;
+        margin-top: 18vh;
+        width: 100%;
+        // background-color: grey;
+        transform: inherit;
+        transition: transform $slider-transi ease;
+        &--left{
+            transform: translate(-150%) scale(0.5);
+            transition: transform $slider-transi ease;
+        }
+        &--right{
+            transform: translate(150%) scale(0.5);
+            transition: transform $slider-transi ease;
+        }
+        &__h3{
+            font-size: 4rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: $s-project;
+            z-index: 1;
+        }
+        &__date{
+            z-index: 1;
+            color: grey;
+            text-align: inherit;
+            text-shadow: inherit;
+            &:before{
+                content: '– ';
+            }
+        }
+        &__desc{
+            z-index: 1;
+
+            background-color: inherit;
+            padding-top: inherit;
+            padding-bottom: inherit;
+        }
+        &__link{
+            filter: grayscale(50%);
+            transition: 0.35s all;
+            z-index: 12;
+
+            &:hover{
+                filter: grayscale(0%);
+                transform: scale(1.1);
+                transition: 0.5s all ease-in-out;
+            }
+        }
+        &__img{
+            margin-top: -350px;
+            float: right;
+            border: 1px dashed grey;
+            padding: inherit;
+        }
+    }
+
+
+    .arrow{
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+        &__el{
+            color: transparent;
+            font-size: 0;
+            &--left{
+                &:before{
+                    content: '';
+                    position: absolute;
+                    border: solid grey;
+                    border-width: 0 4px 4px 0;
+                    display: inline-block;
+                    padding: 12px;
+                    transform: rotate(135deg);
+                    top: 34vh;
+                    left: -5vw;
+                    transition: transform 0.1s ease-in-out;
+                }
+                &:hover:before{
+                    border-color: $c-main;
+                    transform: rotate(135deg) scale(1.2) translate(3px, 3px);
+                    transition: transform 0.2s ease-in-out;
+                }
+            }
+            &--right{
+                &:before{
+                    content: '';
+                    position: absolute;
+                    border: solid grey;
+                    border-width: 0 4px 4px 0;
+                    display: inline-block;
+                    padding: 12px;
+                    transform: rotate(-45deg);
+                    top: 34vh;
+                    right: -5vw;
+                    transition: transform 0.1s ease-in-out;
+                }
+                &:hover:before{
+                    border-color: $c-main;
+                    transform: rotate(-45deg) scale(1.2) translate(3px, 3px);
+                    transition: transform 0.2s ease-in-out;
+                }
             }
         }
     }
