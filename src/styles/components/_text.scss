@@ -52,9 +52,12 @@ body{
 }
 
 .desc{
-    font-size: 4.2rem;
+    font-size: 3rem;
 }
 
+.privacy{
+    font-size: 2.2rem;
+}
 @media (min-width: 768px) {
     .baseline{
         color: $c-main;
@@ -64,5 +67,8 @@ body{
     }
     .coord{
         font-size: inherit;
+    }
+    .desc, .privacy{
+        font-size: 3.2rem;
     }
 }
