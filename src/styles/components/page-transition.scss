@@ -1,0 +1,41 @@
+.page-transition{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 1;
+    z-index: 800;
+    visibility: visible;
+    // pointer-events: none;
+
+    &:after{
+        content: '';
+        background-image: url('../../assets/images/logo-lm@2x.png');
+        background-size: contain;
+        height: 76px;
+        width: 76px;
+        position: absolute;
+        top: calc(50vh - 38px);
+        left: calc(50vw - 38px);
+        z-index: 802;
+    }
+
+    transition: opacity 500ms ease-out 500ms, visibility 0s linear 1000ms, height 0ms linear 1000ms;
+}
+
+.loaded .page-transition{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+
+
+.out .page-transition{
+    opacity: 1;
+    visibility: visible;
+    height: 100vh;
+
+    transition: opacity 500ms ease-out;
+}
