@@ -102,7 +102,7 @@
             </div>
 
             <ul id="slider" class="project-container clearfix">
-                <li class="project project--current" value="0">
+                <!-- <li class="project project--current" value="0">
                     <h3 class="project__h3 col-md-8 col-12">The jungle snack! 0</h3>
                     <p class="project__date col-md-6 col-12">Juin 2020</p>
                     <p class="project__desc col-md-6 col-12">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
@@ -115,67 +115,44 @@
                     <div class="button offset-md-4 col-md-4">
                         <a class="button__el glitch is-glitching fadeTrans" href="desc.html" data-text="Plus d'infos">Plus d'infos</a>
                     </div>
-                </li>
+                </li> -->
 
-                <li class="project project--right" value="1">
-                    <h3 class="project__h3 col-md-8">The jungle snack! 1</h3>
-                    <p class="project__date col-md-6">Juin 2020</p>
-                    <p class="project__desc col-md-6">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
-                    <div>
-                        <a href="desc.html" class="project__link fadeTrans">
-                            <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
-                        </a>
-                    </div>
+                <?php
+                    $json = file_get_contents("./assets/json/projects.json");
+                    $parsed_json = json_decode($json);
 
-                    <div class="button offset-md-4 col-md-4">
-                        <a class="button__el glitch is-glitching fadeTrans" href="desc.html" data-text="Plus d'infos">Plus d'infos</a>
-                    </div>
-                </li>
+                    foreach ($parsed_json as $key => $value) {
+                        $cpt++;
+                        $name = $parsed_json->{$cpt}->{'name'};
+                        $desc = $parsed_json->{$cpt}->{'desc'};
+                        $date = $parsed_json->{$cpt}->{'date'};
+                        $text = $parsed_json->{$cpt}->{'text'};
+                        $img = $parsed_json->{$cpt}->{'img'};
+                        $current = '';
 
-                <li class="project project--right" value="2">
-                    <h3 class="project__h3 col-md-8">The jungle snack! 2</h3>
-                    <p class="project__date col-md-6">Juin 2020</p>
-                    <p class="project__desc col-md-6">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
-                    <div>
-                        <a href="desc.html" class="project__link fadeTrans">
-                            <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
-                        </a>
-                    </div>
+                        if ($cpt-1 == 0) {
+                            $current = 'project--current';
+                        }else{
+                            $current = '';
+                        }
 
-                    <div class="button offset-md-4 col-md-4">
-                        <a class="button__el glitch is-glitching fadeTrans" href="desc.html" data-text="Plus d'infos">Plus d'infos</a>
-                    </div>
-                </li>
+                        echo '
+                        <li class="project '. $current .'" value="'. $cpt-1 .'">
+                            <h3 class="project__h3 col-md-8 col-12">'. $name .'</h3>
+                            <p class="project__date col-md-6 col-12">'. $date .'</p>
+                            <p class="project__desc col-md-6 col-12">'. $desc .'</p>
+                            <div>
+                                <a href="desc.html?projet-'. $cpt .'" class="project__link fadeTrans">
+                                    <img class="project__img col-md-7 col-12" src="'. $img .'" alt="Image du projet '. $name .'">
+                                </a>
+                            </div>
 
-                <li class="project project--right" value="3">
-                    <h3 class="project__h3 col-md-8">The jungle snack! 3</h3>
-                    <p class="project__date col-md-6">Juin 2020</p>
-                    <p class="project__desc col-md-6">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
-                    <div>
-                        <a href="desc.html" class="project__link fadeTrans">
-                            <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
-                        </a>
-                    </div>
-
-                    <div class="button offset-md-4 col-md-4">
-                        <a class="button__el glitch is-glitching fadeTrans" href="desc.html" data-text="Plus d'infos">Plus d'infos</a>
-                    </div>
-                </li>
-
-                <li class="project project--right" value="4">
-                    <h3 class="project__h3 col-md-8">The jungle snack! 4</h3>
-                    <p class="project__date col-md-6">Juin 2020</p>
-                    <p class="project__desc col-md-6">The jungle snack est un jeu de plateau multi-joueur en ligne. Il fonctionne avec socket.io, sur un serveur Node.js.</p>
-                    <div>
-                        <a href="desc.html" class="project__link fadeTrans">
-                            <img class="project__img col-md-7" src="assets/images/the-jungle-snack.png" alt="Image du projet">
-                        </a>
-                    </div>
-
-                    <div class="button offset-md-4 col-md-4">
-                        <a class="button__el glitch is-glitching fadeTrans" href="desc.html" data-text="Plus d'infos">Plus d'infos</a>
-                    </div>
-                </li>
+                            <div class="button offset-md-4 col-md-4">
+                                <a class="button__el glitch is-glitching fadeTrans" href="desc.html" data-text="Plus d\'infos">Plus d\'infos</a>
+                            </div>
+                        </li>';
+                    }
+                 ?>
             </ul>
 
             <footer class="offset-md-4 col-md-4 offset-3 col-6">
