@@ -4,7 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#353535">
     <meta charset="utf-8">
-    <title>Accueil | lucienmary.be</title>
+
+    <?php
+        $cpt = $_GET["project"];
+
+        $json = file_get_contents("./assets/json/projects.json");
+        $parsed_json = json_decode($json);
+        $name = $parsed_json->{$cpt}->{'name'};
+
+        echo '<title>'. $name .' | Projets | lucienmary.be</title>';
+     ?>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/styles/app.css">
@@ -32,8 +42,36 @@
 
     <main class="container">
         <section class="row">
-            <div class="col-md-6">
-                <div>
+
+                <?php
+
+                $text = $parsed_json->{$cpt}->{'text'};
+                $link = $parsed_json->{$cpt}->{'link'};
+                $project = $parsed_json->{$cpt}->{'project'};
+                $date = $parsed_json->{$cpt}->{'date'};
+                $text = $parsed_json->{$cpt}->{'text'};
+                $img = $parsed_json->{$cpt}->{'img'};
+
+                    echo '
+                    <div class="col-md-6">
+                        <div>
+                            <h1 class="glitch-cursor-select glitch-cursor glitch is-glitching desc" data-text="'. $name .'">'. $name .'</h1>
+                            <p class="baseline">'. $project . ' – ' .$date .'</p>
+                        </div>
+                        <div>
+                            <p>'. $text .'</p>
+                        </div>
+                    </div>
+                    <div class="offset-md-1 col-md-5">
+                        <img class="illu" src="'. $img .'" alt="Photo de '. $project .'">
+                        <div class="button">
+                            <a class="button__el glitch is-glitching fadeTrans" href="'. $link .'" data-text="Aller sur le site 💻">Aller sur le site 💻</a>
+                        </div>
+                    </div>
+                    ';
+                 ?>
+
+                <!-- <div>
                     <h1 class="glitch-cursor-select glitch-cursor glitch is-glitching desc" data-text="The jungle snack! Jeu online">The jungle snack! Jeu online</h1>
                     <p class="baseline">Projet scolaire - Juin 2020</p>
                 </div>
@@ -42,15 +80,7 @@
                     <p>Je m’appelle Lucien Mary, j’ai 22 ans. Après une qualification en infographie, j'ai été diplomé en design web et mobile en 2020. Vous pouvez retrouver sur ce site mes meilleurs projets.</p>
 
                     <p>Je m’appelle Lucien Mary, j’ai 22 ans. Après une qualification en infographie, j'ai été diplomé en design web et mobile en 2020. Vous pouvez retrouver sur ce site mes meilleurs projets.</p>
-                </div>
-            </div>
-
-            <div class="offset-md-1 col-md-5">
-                <img class="illu" src="assets/images/the-jungle-snack.png" alt="Photo de Lucien Mary travaillant sur un ordinateur.">
-                <div class="button">
-                    <a class="button__el glitch is-glitching fadeTrans" href="desc.html" data-text="Aller sur le site 💻">Aller sur le site 💻</a>
-                </div>
-            </div>
+                </div> -->
         </section>
     </main>
 
